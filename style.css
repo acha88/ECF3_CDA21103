@@ -1,0 +1,196 @@
+/* TOUTES LES PAGES */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+    align-items: center;
+}
+
+/* HEADER */
+.s_header {
+    background-color: rgb(0, 0, 0);
+    padding: 5%;
+    opacity: 0.70;
+}
+.logo {
+    margin-left: 15%;
+    position: absolute;
+    color: #cd0de6;
+    font-size: 24px;
+    font-weight: 700;
+}
+.ban {
+    background-image: url(img/banniere.png);
+    height: 80vh;
+    background-size: cover;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/* LE MENU */
+.nav_header {
+    text-align: right;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 18%;
+}
+.white {
+    margin-left: 5%;
+    color: white;
+}
+.h-one {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    background-color: #cd0de6;
+    margin: 0 36%;
+    margin-bottom: 1%;
+    margin-top: 10%;
+    opacity: 0.90;
+    padding: 0.5%;
+}
+/* FOOTER */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 2%;
+}
+.contact {
+    margin: 0 10%;
+}
+.droit {
+    margin: 0 10%;
+}
+.partenaire {
+    margin: 0 10%;
+}
+
+
+
+/* LA PAGE INDEX */
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.center {
+    background-color: #cd0de6;
+    padding: 2%;
+    text-align: justify;
+}
+h2,
+h4 {
+    text-align: center;
+    margin-bottom: 1%;
+}
+.section_carte {
+    background-color: black;
+    opacity: 0.70;
+    color: white;
+    padding: 2%;
+}
+
+.soft {
+    margin: 0 10%;
+}
+.alcool {
+    margin: 0 10%;
+}
+.miam {
+    margin: 0 10%;
+}
+.prix_lib {
+    display: flex;
+    flex-direction: row;
+}
+.prix {
+    margin: 0 10%;
+}
+
+/* LA PAGE FORROW */
+.form {
+    background-color: black;
+    color: white;
+    padding: 5%;
+    margin: 5% 35%;
+    text-align: center;
+    box-shadow: #ce6cdb 8px 8px 10px;
+    border: #cd0de6 1px solid;
+    border-radius: 10%;
+}
+.selection {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+input {
+    padding: 1%;
+}
+
+/* LA PAGE BOARDGAMES */
+#listGame {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+
+article {
+    margin-left: 10%;
+    padding: 2%;
+    border : 5px black solid;
+    border-radius: 7%;
+    margin-bottom: 2%;
+    background-color: black;
+    color: #cd0de6;
+    text-align: center;
+}
+.btn_detail {
+    padding: 5%;
+    background-color: #0cbb0c;
+    border: #055f05 2px inherit;
+}
+#detailMore {
+    text-align: justify;
+    margin-left: -20%;
+    margin-top: -130%;
+    padding: 2%;
+    border-left: #cd0de6 2px solid;
+
+    position: fixed;
+    right: 0;
+    top: 50%;
+    width: 20%;
+    margin-top: -5%;
+}
+.btn_reserv {
+    color: black;
+    background-color: #cd0de6;
+    padding: 5%;
+    margin: 0 35%;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 992px){
+    .ban {
+        background-image: none;
+        background-color: black;
+        height: 40vh;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        visibility: hidden;
+    }
+    #detailMore {
+        margin: auto;
+        position: initial;
+        width: 90%;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPRUNTEZ-MOI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="selectGame()">
+    <header class="picture">
+        <div class="s_header">
+            <h1 class="logo">BARAGAMES</h1>
+            <nav class="nav_header">
+                <a class="white home" href="index.html">ACCUEIL</a>
+                <a class="white" href="boardgames.html">JEUX</a>
+                <a class="white" href="forrow.html">EMPRUNTEZ-MOI</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="form">
+            <form action="">
+                <legend>FORMULAIRE D'EMPRUNT</legend>
+                <div class="selection">
+                    <label for="">Jeux :</label>
+                    <select id="game" onchange="choixGame()" required>
+                        <option value="" >Choisissez un jeux</option>
+                    </select>
+                </div>
+                <div class="selection">
+                    <label for="start-date">Date de début :</label>
+                    <input type="date" id="start-date" name="start-date">
+                </div>
+                <div class="selection">
+                    <label for="end-date">Date de fin :</label>
+                    <input type="date" id="end-date" name="end-date">
+                </div>
+                <input class="selection" type="submit" value="Envoyer">
+            </form>
+        </section>
+    </main>
+    <footer class="row footer">
+        <div class="contact">
+            <address>
+                <p>56 square Eugène Herzog</p>
+                <p>54390 FROUARD</p>
+            </address>
+        </div>
+        <div class="droit">
+            <p>© 2023 - CHA'DEV</p>
+            <p>Mentions légales</p>
+        </div>
+        <div class="partenaire">
+            <p>VILLE DE NANCY</p>
+            <p>NANCY THERMAL</p>
+            <p>ESCAPE GAMES</p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
