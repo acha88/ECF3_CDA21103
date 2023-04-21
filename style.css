@@ -9,18 +9,165 @@
 }
 
 /* HEADER */
-.s_header {
-    background-color: rgb(0, 0, 0);
-    padding: 5%;
-    opacity: 0.70;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* MENU HAMBURGER */
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: greenyellow;
+  background-color: black;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover{
+    font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #cd0de6;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px;
+  box-shadow: inset 0 0 500px rgba(233, 7, 203, 0.5);
+  height: 40vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .logo {
+    top: 5px;
+    right: 15px;
     margin-left: 15%;
     position: absolute;
     color: #cd0de6;
-    font-size: 24px;
+    font-size: 35px;
     font-weight: 700;
 }
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}
+
+
+.s_header {
+    background-color: rgb(0, 0, 0);
+    padding: 1%;
+}
+
 .ban {
     background-image: url(img/banniere.png);
     height: 80vh;
@@ -30,18 +177,7 @@ a {
     text-decoration: none;
     color: white;
 }
-/* LE MENU */
-.nav_header {
-    text-align: right;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: 18%;
-}
-.white {
-    margin-left: 5%;
-    color: white;
-}
+
 .h-one {
     color: white;
     text-align: center;
@@ -50,7 +186,7 @@ a {
     background-color: #cd0de6;
     margin: 0 36%;
     margin-bottom: 1%;
-    margin-top: 10%;
+    margin-top: 20%;
     opacity: 0.90;
     padding: 0.5%;
 }
@@ -72,8 +208,6 @@ a {
     margin: 0 10%;
 }
 
-
-
 /* LA PAGE INDEX */
 .row {
     display: flex;
@@ -81,7 +215,7 @@ a {
 }
 .center {
     background-color: #cd0de6;
-    padding: 2%;
+    padding: 10%;
     text-align: justify;
 }
 h2,
@@ -118,7 +252,7 @@ h4 {
     background-color: black;
     color: white;
     padding: 5%;
-    margin: 5% 35%;
+    margin: 12% 35%;
     text-align: center;
     box-shadow: #ce6cdb 8px 8px 10px;
     border: #cd0de6 1px solid;
@@ -138,7 +272,9 @@ input {
     flex-wrap: wrap;
     padding: 1%;
 }
-
+.top {
+    margin-top: 10%;
+}
 article {
     margin-left: 10%;
     padding: 2%;
@@ -157,7 +293,6 @@ article {
 #detailMore {
     text-align: justify;
     margin-left: -20%;
-    margin-top: -130%;
     padding: 2%;
     border-left: #cd0de6 2px solid;
     position: fixed;
@@ -186,11 +321,16 @@ article {
     .row {
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
+    .h-one,
     .logo {
         visibility: hidden;
     }
     /* PAGE BOARDGAMES */
+    .top {
+        margin-top: 40%;
+    }
     #detailMore {
         margin: auto;
         position: initial;
@@ -201,5 +341,6 @@ article {
     .mobile {
         display: flex;
         flex-direction: column;
+        margin-top: 30%;
     }
 }
